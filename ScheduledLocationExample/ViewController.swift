@@ -33,7 +33,7 @@ class ViewController: UIViewController, APScheduledLocationManagerDelegate {
             if CLLocationManager.authorizationStatus() == .authorizedAlways {
                 
                 startStopButton.setTitle("stop", for: .normal)
-                manager.startUpdatingLocation(interval: 60, acceptableLocationAccuracy: 100)
+                manager.startUpdatingLocation(interval: 5, acceptableLocationAccuracy: 100)
             }else{
                 
                 manager.requestAlwaysAuthorization()
@@ -43,6 +43,8 @@ class ViewController: UIViewController, APScheduledLocationManagerDelegate {
     
     func scheduledLocationManager(_ manager: APScheduledLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        
+        print("didUpdateLocations",locations.last)
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .medium

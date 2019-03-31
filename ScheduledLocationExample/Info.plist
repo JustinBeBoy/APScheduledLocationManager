@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need your position in background</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We need your position in background</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your position</string>
 </dict>
 </plist>
